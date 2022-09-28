@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "yekan";
+  src: url(../fonts/IRANYekanBold.ttf);
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "yekan";
+}
+@layer base{
+  body{
+    direction:rtl;
+  }
+}
+@layer components {
+  .container_menu_category > li {
+    @apply flex items-center gap-1 py-3 border-b-2 transition-all  cursor-pointer  border-transparent hover:border-b-red-500;
+  }
+  .container_menu_category svg {
+    @apply w-5 h-5;
+  }
+}
+.posts {
+  @apply h-[85vh] lg:h-[80vh]  overflow-auto  mb-24 lg:mb-10 flex flex-col gap-2 w-full lg:max-w-[620px] lg:w-[620px];
+} 
+
+
+.posts {
+  scroll-snap-type: y mandatory;
+}
+
+.posts > div {
+  scroll-snap-align: start;
+  min-height: 100%;
+}
+
+.posts::-webkit-scrollbar {
+  display: none;
+}
+.muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 10px 5px !important;
+}
+
+@media all and (max-width: 767px) {
+  .muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 13px 5px !important;
+  }
+}
+
+/*@layer components{
+  .pegah{
+    @apply bg-r
+  }
+}*/
